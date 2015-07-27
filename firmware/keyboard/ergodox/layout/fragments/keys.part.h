@@ -131,10 +131,16 @@ void KF(nop) (void) {}
 
 // --- special keycode --------------------------------------------------------
 
-KEYS__DEFAULT( power,   KEYBOARD__Power      );
-KEYS__DEFAULT( volumeU, KEYBOARD__VolumeUp   );
-KEYS__DEFAULT( volumeD, KEYBOARD__VolumeDown );
-KEYS__DEFAULT( mute,    KEYBOARD__Mute       );
+KEYS__DEFAULT( power,     KEYBOARD__Power             );
+KEYS__DEFAULT( volumeU,   KEYBOARD__VolumeUp          );
+KEYS__DEFAULT( volumeD,   KEYBOARD__VolumeDown        );
+KEYS__DEFAULT( mute,      KEYBOARD__Mute              );
+
+#include "../../../../lib/usb/usage-page/consumer.h"
+
+KEYS__DEFAULT( playp,     CONSUMER__Play_Pause        );
+KEYS__DEFAULT( nextt,     CONSUMER__ScanNextTrack     );
+KEYS__DEFAULT( prevt,     CONSUMER__ScanPreviousTrack );
 
 
 // --- special function -------------------------------------------------------
