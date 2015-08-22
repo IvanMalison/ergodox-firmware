@@ -47,23 +47,23 @@ static layout_t layout PROGMEM = {
 // macro, unused,
        K,    nop,
 // left hand ...... ......... ......... ......... ......... ......... .........
-   grave,        1,        2,        3,        4,        5,   lpo1l1,
+   grave,        1,        2,        3,        4,        5,   esc,
      tab,        q,        w,        e,        r,        t,   lpu1l1,
    ctrlL,        a,        s,        d,        f,        g,
 shL2kcap,        z,        x,        c,        v,        b,    brktL,
-     del,     mute,    grave,     altL,     guiL,
-                                                               ctrlL,   arrowL,
-                                                       nop,      nop,   arrowD,
-                                                        bs,     altL,     guiR,
+lpupo2l2,      del,      esc,     altL,     guiL,
+                                                                mute,  volumeU,
+                                                       nop,      nop,  volumeD,
+                                                        bs,     altL, lpupo1l1,
 // right hand ..... ......... ......... ......... ......... ......... .........
             lpu1l1,        6,        7,        8,        9,        0,     dash,
-             equal,        y,        u,        i,        o,        p,     pipe,
+             equal,        y,        u,        i,        o,        p,  bkslash,
                            h,        j,        k,        l,  semicol,    quote,
              brktR,        n,        m,    comma,   period,    slash, shR2kcap,
-                                  altR,   arrowL,   arrowD,   arrowU,   arrowR,
- arrowR,       bs,
- arrowU,      nop,      nop,
-   guiR,    enter,    space ),
+                                  altR, lpupo1l1,   arrowD,   arrowU,    ctrlR,
+lpupo2l2,       bs,
+   ctrlR,      nop,      nop,
+    guiR,    enter,    space ),
 
 // ............................................................................
 
@@ -72,47 +72,21 @@ shL2kcap,        z,        x,        c,        v,        b,    brktL,
        K,    nop,
 // left hand ...... ......... ......... ......... ......... ......... .........
   transp,       F1,       F2,       F3,       F4,       F5,      F11,
-  transp,   braceL,   braceR,    brktL,    brktR,      nop,   lpo1l1,
-  transp,  semicol,    slash,     dash,        0,    colon,
-  transp,        6,        7,        8,        9,     plus, lpupo2l2,
-  transp,     mute,    playp,  volumeU,  volumeD,
+  transp,   transp,   arrowU,   transp,   transp,   transp,   lpo1l1,
+  transp,   arrowL,   arrowD,   arrowR,   transp,   transp,
+  transp,   transp,   transp,   transp,   transp,   transp,   transp,
+  transp,   transp,   transp,   transp,   transp,
                                                               transp,   transp,
                                                     transp,   transp,   transp,
-                                                    transp,   transp,   transp,
+                                                   volumeD,  volumeU,   transp,
 // right hand ..... ......... ......... ......... ......... ......... .........
                F12,       F6,       F7,       F8,       F9,      F10,    power,
-            lpo2l2,    caret,  undersc, lessThan, grtrThan,   dollar,  volumeU,
-                     bkslash,        1,   parenL,   parenR,    equal,  volumeD,
-          lpupo3l3, asterisk,        2,        3,        4,        5,     mute,
+            transp, lessThan, grtrThan,   transp,   transp,    brktL,    brktR,
+                      arrowL,   arrowD,   arrowU,   arrowR,   braceL,   braceR,
+            transp,   transp,    brktL,    brktR,   transp,   parenL,   parenR,
                                 transp,   transp,   transp,   transp,   transp,
   transp,   transp,
   transp,   transp,   transp,
-  transp,   transp,   transp  ),
-
-// ............................................................................
-
-    MATRIX_LAYER(  // layer 3 : keyboard functions
-// macro, unused,
-       K,    nop,
-// left hand ...... ......... ......... ......... ......... ......... .........
-   btldr,      nop,      nop,      nop,      nop,      nop,      nop,
-     nop,      nop,      nop,      nop,      nop,      nop,      nop,
-     nop,      nop,      nop,      nop,      nop,      nop,
-     nop,      nop,      nop,      nop,      nop,      nop,      nop,
-     nop,      nop,      nop,      nop,      nop,
-                                                                 nop,      nop,
-                                                       nop,      nop,      nop,
-                                                       nop,      nop,      nop,
-// right hand ..... ......... ......... ......... ......... ......... .........
-               nop,      nop,      nop,      nop,      nop,      nop, dmp_sram,
-               nop,      nop,      nop,      nop,      nop,      nop, dmp_prog,
-                         nop,      nop,      nop,      nop,      nop, dmp_eepr,
-               nop,      nop,      nop,      nop,      nop,      nop,      nop,
-                                   nop,      nop,      nop,      nop,      nop,
-     nop,      nop,
-     nop,      nop,      nop,
-     nop,      nop,      nop  ),
-
-// ............................................................................
+  transp,     mute,   transp  )
 };
 
